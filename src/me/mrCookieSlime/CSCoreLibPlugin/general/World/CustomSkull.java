@@ -199,9 +199,7 @@ public class CustomSkull {
 
 		Object profile;
 		if (ReflectionUtils.isVersion("v1_14_"))
-			profile = ReflectionUtils.getFieldValue(
-				ReflectionUtils.getClass(PackageName.NMS, "TileEntitySkull"), "gameProfile"
-			);
+			profile = TileEntityTypes.SKULL.a().gameProfile;
 		else
 			profile = getgameprofile.invoke(tile);
 		
